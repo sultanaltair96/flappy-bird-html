@@ -40,16 +40,16 @@
   // Game constants
   const W = 400;
   const H = 600;
-  const GRAVITY = 0.45;
-  const JUMP = -7.5;
-  const TERMINAL_VELOCITY = 10;
+  const GRAVITY = 0.22;
+  const JUMP = -5.2;
+  const TERMINAL_VELOCITY = 7;
   const BIRD_X = 80;
   const BIRD_W = 30;
   const BIRD_H = 22;
-  const HITBOX_W = 24;
-  const HITBOX_H = 18;
+  const HITBOX_W = 22;
+  const HITBOX_H = 16;
   const PIPE_W = 52;
-  const PIPE_GAP = 130;
+  const PIPE_GAP = 140;
   const PIPE_SPEED = 3;
   const PIPE_SPACING = 220;
   const GROUND_Y = 520;
@@ -122,12 +122,12 @@
     birdY = H / 2;
     birdRot = -25 * Math.PI / 180;
     pipes = [];
-    nextPipeX = W;
     score = 0;
     shakeFrames = 0;
     flashAlpha = 0;
     frame = 0;
-    // Spawn first pipe immediately
+    // Spawn first pipe with a slight delay — starts off-screen right
+    nextPipeX = W + 120;
     spawnPipe();
   }
 

@@ -188,7 +188,8 @@
 
       wingFrame = Math.floor(frame / WING_CYCLE) % 3;
 
-      // Spawn pipes
+      // Advance pipe spawn tracker
+      nextPipeX -= PIPE_SPEED;
       if (nextPipeX <= W + 20) {
         spawnPipe();
       }
